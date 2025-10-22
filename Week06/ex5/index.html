@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nhà Sách HuyTr</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>📚 Nhà Sách HuyTr</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#product-list">Sản phẩm</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- GIỚI THIỆU -->
+    <section>
+      <h2>Giới thiệu</h2>
+      <p>
+        Chào mừng bạn đến với <strong>Nhà Sách HuyTr</strong> — nơi cung cấp những cuốn sách hay,
+        giúp bạn phát triển tri thức, kỹ năng và cảm hứng đọc mỗi ngày.
+      </p>
+    </section>
+
+    <!-- TÌM KIẾM + NÚT THÊM -->
+    <section class="actions">
+      <input type="text" id="searchInput" placeholder="🔍 Tìm kiếm sản phẩm...">
+      <button id="searchBtn">Tìm</button>
+      <button id="addProductBtn">➕ Thêm sản phẩm</button>
+    </section>
+
+    <!-- FORM THÊM -->
+    <section>
+      <form id="addProductForm" class="hidden">
+        <h3>Thêm sản phẩm mới</h3>
+        <label for="newName">Tên sản phẩm:</label>
+        <input type="text" id="newName" required>
+
+        <label for="newPrice">Giá (đ):</label>
+        <input type="number" id="newPrice" min="1" required>
+
+        <label for="newDesc">Mô tả:</label>
+        <textarea id="newDesc" rows="3" required></textarea>
+
+        <p id="errorMsg" style="color:red; font-weight:500; margin-top:5px;"></p>
+
+        <button type="submit">Thêm</button>
+        <button type="button" id="cancelBtn">Hủy</button>
+      </form>
+    </section>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <section id="product-list">
+      <h2>Sản phẩm nổi bật</h2>
+
+      <article class="product-item">
+        <h3 class="product-name">Sống Tích Cực Mỗi Ngày</h3>
+        <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=400&q=80"
+             alt="Bìa sách Sống Tích Cực Mỗi Ngày" width="200" height="280">
+        <p>Những thói quen nhỏ giúp bạn duy trì tinh thần tích cực và hạnh phúc mỗi ngày.</p>
+        <p class="price"><strong>Giá:</strong> 115.000đ</p>
+      </article>
+
+      <article class="product-item">
+        <h3 class="product-name">Lập Trình Python Cơ Bản</h3>
+        <img src="https://sachhoc.com/image/cache/catalog/Tinhoc/laptrinh/EF79F3EB-1AB9-4093-8181-042C5082D4C7-500x554.jpeg"
+             alt="Bìa sách Lập Trình Python Cơ Bản" width="200" height="280">
+        <p>Hướng dẫn học lập trình Python cho người mới bắt đầu, ví dụ trực quan, dễ hiểu.</p>
+        <p class="price"><strong>Giá:</strong> 189.000đ</p>
+      </article>
+
+      <article class="product-item">
+        <h3 class="product-name">Đắc Nhân Tâm</h3>
+        <img src="https://nhasachmienphi.com/wp-content/uploads/dac-nhan-tam.jpg"
+             alt="Bìa sách Đắc Nhân Tâm" width="200" height="280">
+        <p>Cuốn sách kinh điển về nghệ thuật ứng xử và giao tiếp giúp bạn thành công trong cuộc sống.</p>
+        <p class="price"><strong>Giá:</strong> 120.000đ</p>
+      </article>
+
+      <article class="product-item">
+        <h3 class="product-name">Tâm Lý Học Về Tiền</h3>
+        <img src="https://nhasachmienphi.com/wp-content/uploads/dac-nhan-tam.jpg"
+             alt="Bìa sách Tâm Lý Học Về Tiền" width="200" height="280">
+        <p>Phân tích cách con người suy nghĩ, cảm xúc và ra quyết định trong việc sử dụng tiền bạc.</p>
+        <p class="price"><strong>Giá:</strong> 145.000đ</p>
+      </article>
+    </section>
+
+    <!-- FORM LIÊN HỆ -->
+    <section id="contact">
+      <h2>Liên hệ với chúng tôi</h2>
+      <form>
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="message">Nội dung:</label>
+        <textarea id="message" rows="4" required></textarea>
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nhà Sách HuyTr — Nguyễn Xiển, Thanh Trì, Hà Nội</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

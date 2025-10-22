@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nhà Sách HuyTr</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>📚 Nhà Sách HuyTr</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#product-list">Sản phẩm</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- GIỚI THIỆU -->
+    <section>
+      <h2>Giới thiệu</h2>
+      <p>
+        Chào mừng bạn đến với <strong>Nhà Sách HuyTr</strong> — nơi cung cấp những cuốn sách hay,
+        giúp bạn phát triển tri thức, kỹ năng và cảm hứng đọc mỗi ngày.
+      </p>
+    </section>
+
+    <!-- THANH CHỨC NĂNG -->
+    <section class="actions">
+      <input type="text" id="searchInput" placeholder="🔍 Tìm kiếm sản phẩm...">
+      <select id="filterPrice">
+        <option value="all">Tất cả giá</option>
+        <option value="low">Dưới 100.000đ</option>
+        <option value="mid">100.000đ - 200.000đ</option>
+        <option value="high">Trên 200.000đ</option>
+      </select>
+      <select id="sortSelect">
+        <option value="">Sắp xếp...</option>
+        <option value="name">Theo tên (A-Z)</option>
+        <option value="price">Theo giá tăng</option>
+      </select>
+      <button id="searchBtn">Tìm</button>
+      <button id="addProductBtn">➕ Thêm sản phẩm</button>
+    </section>
+
+    <!-- FORM THÊM SẢN PHẨM -->
+    <section>
+      <form id="addProductForm">
+        <h3>Thêm sản phẩm mới</h3>
+        <label>Tên sản phẩm:</label>
+        <input type="text" id="newName" required>
+        <label>Giá (đ):</label>
+        <input type="number" id="newPrice" min="1" required>
+        <label>Mô tả:</label>
+        <textarea id="newDesc" rows="3" required></textarea>
+        <button type="submit">Thêm</button>
+        <button type="button" id="cancelBtn">Hủy</button>
+        <p id="errorMsg" style="color:red;font-weight:500;"></p>
+      </form>
+    </section>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <section id="product-list">
+      <h2>Sản phẩm nổi bật</h2>
+    </section>
+
+    <!-- FORM LIÊN HỆ -->
+    <section id="contact">
+      <h2>Liên hệ</h2>
+      <form>
+        <label>Họ và tên:</label>
+        <input type="text" required>
+        <label>Email:</label>
+        <input type="email" required>
+        <label>Nội dung:</label>
+        <textarea rows="3" required></textarea>
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- POPUP -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span id="closePopup" class="close-btn">&times;</span>
+      <h3 id="popupTitle">Chi tiết sản phẩm</h3>
+      <img id="popupImage" src="" alt="">
+      <p id="popupDesc"></p>
+      <p id="popupPrice"></p>
+
+      <form id="editForm" class="hidden">
+        <label>Tên:</label>
+        <input type="text" id="editName" required>
+        <label>Giá:</label>
+        <input type="number" id="editPrice" min="1" required>
+        <label>Mô tả:</label>
+        <textarea id="editDesc" rows="3" required></textarea>
+        <button type="submit">Lưu thay đổi</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Nhà Sách HuyTr — Nguyễn Xiển, Thanh Trì, Hà Nội</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

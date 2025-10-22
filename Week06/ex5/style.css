@@ -1,0 +1,73 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: sans-serif; line-height: 1.6; background: #f7f9fc; color: #333; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* HEADER */
+header { position: sticky; top: 0; background: #0a3d62; color: #fff; padding: 16px 12px; z-index: 10; }
+header h1 { margin-bottom: 8px; font-size: 1.6rem; }
+nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; }
+nav ul li a { color: #fff; text-decoration: none; font-weight: 600; }
+nav ul li a:hover { text-decoration: underline; }
+
+/* MAIN */
+main { max-width: 1100px; margin: 24px auto; padding: 0 12px; }
+section { margin-bottom: 28px; }
+h2 { color: #0a3d62; margin-bottom: 12px; }
+
+/* ACTIONS */
+.actions { text-align: center; margin-bottom: 20px; }
+.actions input { padding: 8px; width: 250px; border: 1px solid #ccc; border-radius: 4px; }
+.actions button { background: #0a3d62; color: white; border: none; padding: 8px 12px; border-radius: 4px; margin-left: 6px; cursor: pointer; }
+.actions button:hover { background: #1e6091; }
+
+/* PRODUCT GRID */
+#product-list { display: flex; flex-wrap: wrap; gap: 20px; }
+#product-list > h2 { width: 100%; }
+.product-item {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  flex: 1 1 30%;
+  min-width: 260px;
+}
+.product-item h3 { font-size: 1.05rem; font-weight: 700; margin: 8px 0; color: #0a3d62; }
+.product-item p { margin: 6px 0; }
+.price strong { color: #009432; }
+
+/* FORM THÊM */
+.hidden { display: none; }
+#addProductForm {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 16px;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#addProductForm input, #addProductForm textarea, #addProductForm button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#addProductForm button { background: #0a3d62; color: white; cursor: pointer; font-weight: 600; margin-top: 10px; }
+#addProductForm button:hover { background: #1e6091; }
+
+/* LIÊN HỆ */
+#contact form { max-width: 400px; margin: 20px auto; background: #fff; border: 1px solid #ccc; border-radius: 6px; padding: 16px; }
+#contact input, #contact textarea { width: 100%; padding: 10px; margin-top: 6px; margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 4px; }
+#contact button { background: #0a3d62; color: #fff; border: none; padding: 10px 14px; border-radius: 4px; cursor: pointer; font-weight: 600; }
+#contact button:hover { background: #1e6091; }
+
+/* FOOTER */
+footer { background: #0a3d62; color: #fff; text-align: center; padding: 12px; font-size: 0.95rem; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; gap: 8px; }
+  #product-list { flex-direction: column; }
+  .product-item { flex: 1 1 100%; }
+}
