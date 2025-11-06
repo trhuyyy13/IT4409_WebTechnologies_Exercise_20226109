@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #93a0b4;
+  --accent: #6EE7B7;
+  --accent-2: #60A5FA;
+  --danger: #FB7185;
+  --glass: rgba(255,255,255,0.04);
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(2,6,23,0.6);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial;
+  background: linear-gradient(180deg,#071023 0%, #0b1220 100%);
+  color: #e6eef8;
+  min-height:100vh;
+  padding:2rem;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:2rem;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
+
+h1{font-size:1.8rem;text-align:center;margin-bottom:1rem;background:linear-gradient(90deg,var(--accent-2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+.search-form{margin:1rem 0}
+.search-form input{width:100%;padding:0.9rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:var(--card);color:var(--accent-2);font-weight:500}
+
+/* Floating Add Button */
+.btn-add.fab{position:fixed;right:36px;bottom:36px;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent) 0%, var(--accent-2) 100%);color:#04263b;font-size:28px;border:none;box-shadow:0 10px 30px rgba(96,165,250,0.14);cursor:pointer}
+.fab-icon{font-weight:700}
+
+/* Card grid */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+.user-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:1rem;border-radius:12px;display:flex;flex-direction:column;justify-content:space-between}
+.user-top{display:flex;gap:0.75rem;align-items:center}
+.avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;color:#01243a;font-weight:700;font-size:18px}
+.user-meta .user-name{font-size:1.05rem;color:#eaf6ff}
+.user-username{color:var(--muted);font-size:0.85rem}
+.user-body{margin-top:0.9rem;color:var(--muted);font-size:0.9rem}
+.meta-row{margin:0.25rem 0}
+
+.card-actions{display:flex;gap:0.5rem;margin-top:0.9rem}
+.btn-edit,.btn-delete{flex:1;padding:0.5rem;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+.btn-edit{background:transparent;border:1px solid rgba(96,165,250,0.18);color:var(--accent-2)}
+.btn-delete{background:transparent;border:1px solid rgba(251,113,133,0.12);color:var(--danger)}
+
+.no-data{padding:2rem;text-align:center;color:var(--muted)}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.8));display:flex;align-items:center;justify-content:center;z-index:60}
+.modal-content{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1.25rem;border-radius:12px;width:92%;max-width:520px;border:1px solid rgba(255,255,255,0.04)}
+.modal-content h4{text-align:center;color:#eaf6ff;margin-bottom:0.8rem}
+.form-group{margin-bottom:0.9rem}
+.form-group label{display:block;color:var(--muted);font-size:0.85rem;margin-bottom:0.25rem}
+.form-group input{width:100%;padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#eaf6ff}
+.form-actions{display:flex;gap:0.6rem;margin-top:1rem}
+.btn-save{flex:1;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#06202a;border:none;padding:0.7rem;border-radius:10px;font-weight:700}
+.btn-cancel{flex:1;background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--muted);padding:0.7rem;border-radius:10px}
+
+.loading{padding:2rem;text-align:center;color:var(--muted)}
+
+@media(max-width:640px){
+  .card-grid{grid-template-columns:1fr}
+  .btn-add.fab{right:16px;bottom:16px;width:56px;height:56px}
+}
